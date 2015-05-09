@@ -20,17 +20,19 @@
   ],
   "keywords": [
     "es6",
-    "ecmascript",
+    "es2015",
     "harmony",
     "ponyfill",
-    "prollyfill",
     "polyfill",
     "shim",
     "number",
     "math",
     "sign",
     "positive",
-    "negative"
+    "negative",
+    "sgn",
+    "signum",
+    "real"
   ],
   "devDependencies": {
     "ava": "0.0.4"
