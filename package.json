@@ -1,7 +1,7 @@
 {
   "name": "math-sign",
   "version": "1.0.1",
-  "description": "ES6 Math.sign() ponyfill",
+  "description": "ES6 Math.sign() polyfill",
   "license": "MIT",
   "repository": "sindresorhus/math-sign",
   "author": {
