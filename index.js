@@ -1,10 +1,12 @@
 'use strict';
-module.exports = Math.sign || function (val) {
-	val = Number(val);
+var numberIsNan = require('number-is-nan');
 
-	if (val === 0 || /* Number.isNaN() polyfill => */ val !== val) {
-		return val;
+module.exports = Math.sign || function (x) {
+	x = Number(x);
+
+	if (x === 0 || numberIsNan(x)) {
+		return x;
 	}
 
-	return val > 0 ? 1 : -1;
+	return x > 0 ? 1 : -1;
 };

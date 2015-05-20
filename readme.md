@@ -7,7 +7,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save math-sign
 ```
 
