@@ -1,5 +1,6 @@
 'use strict';
 var test = require('ava');
+Math.sign = undefined;
 var mathSign = require('./');
 
 test(function (t) {
