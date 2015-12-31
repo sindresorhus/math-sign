@@ -1,30 +1,29 @@
-'use strict';
-var test = require('ava');
-var numberIsNan = require('number-is-nan');
-Math.sign = undefined;
-var mathSign = require('./');
+import test from 'ava';
+import numberIsNan from 'number-is-nan';
 
-test(function (t) {
-	t.assert(mathSign(0) === 0);
-	t.assert(mathSign(100.1) === 1);
-	t.assert(mathSign(-0) === -0);
-	t.assert(mathSign(5) === 1);
-	t.assert(mathSign(-5) === -1);
-	t.assert(mathSign('-5') === -1);
-	t.assert(numberIsNan(mathSign(NaN)));
-	t.assert(numberIsNan(mathSign('foo')));
-	t.assert(numberIsNan(mathSign()));
-	t.assert(numberIsNan(mathSign([1, 1])));
-	t.assert(String(1/mathSign(0)) === 'Infinity');
-	t.assert(String(1/mathSign(-0)) === '-Infinity');
-	t.assert(mathSign([-100.1]) === -1);
-	t.assert(mathSign({toString: function () { return '100'; }}) === 1);
-	t.assert(mathSign({toString: function () { return 100; }}) === 1);
-	t.assert(mathSign({valueOf: function () { return -1.1; }}) === -1);
-	t.assert(mathSign({valueOf: function () { return '-1.1'; }}) === -1);
-	t.assert(mathSign(Infinity) === 1);
-	t.assert(mathSign(-Infinity) === -1);
-	t.assert(mathSign('Infinity') === 1);
-	t.assert(mathSign('-Infinity') === -1);
-	t.end();
+Math.sign = undefined;
+const fn = require('./');
+
+test(t => {
+	t.is(fn(0), 0);
+	t.is(fn(100.1), 1);
+	t.is(fn(-0), -0);
+	t.is(fn(5), 1);
+	t.is(fn(-5), -1);
+	t.is(fn('-5'), -1);
+	t.true(numberIsNan(fn(NaN)));
+	t.true(numberIsNan(fn('foo')));
+	t.true(numberIsNan(fn()));
+	t.true(numberIsNan(fn([1, 1])));
+	t.is(String(1 / fn(0)), 'Infinity');
+	t.is(String(1 / fn(-0)), '-Infinity');
+	t.is(fn([-100.1]), -1);
+	t.is(fn({toString: () => '100'}), 1);
+	t.is(fn({toString: () => 100}), 1);
+	t.is(fn({valueOf: () => -1.1}), -1);
+	t.is(fn({valueOf: () => '-1.1'}), -1);
+	t.is(fn(Infinity), 1);
+	t.is(fn(-Infinity), -1);
+	t.is(fn('Infinity'), 1);
+	t.is(fn('-Infinity'), -1);
 });
