@@ -1,6 +1,6 @@
 # math-sign [![Build Status](https://travis-ci.org/sindresorhus/math-sign.svg?branch=master)](https://travis-ci.org/sindresorhus/math-sign)
 
-> ES6 [`Math.sign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign) ponyfill
+> ES2015 [`Math.sign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign) ponyfill
 
 > Ponyfill: A polyfill that doesn't overwrite the native method
 
