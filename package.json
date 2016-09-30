@@ -1,6 +1,6 @@
 {
   "name": "math-sign",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ES2015 Math.sign() ponyfill",
   "license": "MIT",
   "repository": "sindresorhus/math-sign",
