@@ -2,7 +2,7 @@
 var numberIsNan = require('number-is-nan');
 
 module.exports = Math.sign || function (x) {
-	x = Number(x);
+	x = +x;
 
 	if (x === 0 || numberIsNan(x)) {
 		return x;
