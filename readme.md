@@ -1,4 +1,4 @@
-# math-sign [![Build Status](https://travis-ci.org/sindresorhus/math-sign.svg?branch=master)](https://travis-ci.org/sindresorhus/math-sign)
+# math-sign
 
 > ES2015 [`Math.sign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign) [ponyfill](https://ponyfill.com)
 
