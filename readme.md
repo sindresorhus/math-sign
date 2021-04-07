@@ -1,3 +1,7 @@
+Deprecated as this is now natively available in all modern browsers and Node.js versions.
+
+---
+
 # math-sign
 
 > ES2015 [`Math.sign()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sign) [ponyfill](https://ponyfill.com)
